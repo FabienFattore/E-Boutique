@@ -1,6 +1,253 @@
 :root {
-    --primary-color: #161a1e;
+    --primary-color: rgb(22,26,30); background: linear-gradient(90deg, rgba(22,26,30,1) 0%, rgba(39,43,47,1) 52%);;
     --secondary-color: #e58e27;
     --third-color: #fbfbfb;
+    --window-back-color: rgb(35,41,47);
+    background: linear-gradient(90deg, rgba(35,41,47,1) 0%, rgba(62,69,75,1) 52%);;
+    --body-color: rgb(110,96,92); background: linear-gradient(90deg, rgba(110,96,92,1) 0%, rgba(78,63,59,1) 100%); 
     --text-color: #9a9a9a;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    background: var(--body-color);
+    background: linear-gradient(90deg, rgba(110,96,92,1) 0%, rgba(78,63,59,1) 100%); 
+}
+
+h2, h3 {
+    color: var(--third-color);
+    font-weight: bold;
+}
+
+h4 {
+    color: var(--text-color);
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+a:hover {
+    scale: 1.1;
+}
+
+/* MAIN */
+
+main {
+    border-radius: 25px;
+    margin: 5vh auto;
+    width: 85vw;
+    height: 90vh;
+    background-color: var(--primary-color);
+    stroke-opacity: 0.2;
+}
+
+/* NAV */
+
+nav {
+    margin: auto;
+    width: 92%;
+    padding: 20px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-links {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.nav-icons {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-icon {
+    width: 25px;
+}
+
+.nav-profile {
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    height: 75vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* SIDEBAR */
+
+.side-bar {   
+    width: 15%;
+}
+
+.side-bar-icons {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.side-bar-icons img {
+    width: 24px;
+}
+
+.side-bar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    background: var(--window-back-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+label {
+    color: var(--text-color);
+    padding: 0 15px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+input[type=checkbox] {
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
+    background: var(--window-back-color);
+    border: 1px solid var(--text-color);
+}
+
+input[type="checkbox"]:checked {
+    background: var(--secondary-color);
+    position: relative;
+
+    &:before {
+        content: url(assets/icon/check.png);   
+      color: var(--third-color);
+      position: absolute;
+      padding: 1px 4px;
+    }
+  }
+
+button {
+    width: 90%;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 30px auto;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+/* SHOP */
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 75vh;
+    margin: 0 0 0 auto;
+}
+
+.shop-actu {
+    background: url(assets/img/NY.jpg) no-repeat fixed;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+    height: 30vh;
+}
+
+.spidey {
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    width: 210px;
+}
+
+.spidey-title {
+    position: relative;
+    left: 15%;
+    top: 10%;
+    width: 50%;
+}
+
+.shop-games {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 40vh;
+    margin-top: 5vh;
+}
+
+.shop-game {
+    background-color: var(--window-back-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    width: 13vw;
+    height: 40vh;
+}
+
+.shop-game img {
+    border-radius: 10px;
+    margin: 10px;
+    width: 170px;
+}
+
+.shop-buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-buy button {
+    width: 100px;
+    margin-left: 10px;
+    font-weight: bold;
 }
